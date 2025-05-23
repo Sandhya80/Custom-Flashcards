@@ -31,7 +31,7 @@ A modern, interactive flashcard app for learning JavaScript, HTML5, and CSS3. Fe
 ## Deployed App
 
 You can try the Custom Flashcards live here:  
-[ ](https://sandhya80.github.io/Flashcard3/)
+[https://sandhya80.github.io/Custom-Flashcards/](https://sandhya80.github.io/Custom-Flashcards/)
 
 ---
 
@@ -62,7 +62,7 @@ Flashcard Quizzes is built with accessibility and SEO best practices in mind:
   The app is fully navigable using a keyboard, with logical tab order and focus management.
 
 - **Color Contrast:**  
-  Text and interactive elements have sufficient color contrast ratios to ensure readability for users with visual impairments.
+  Text and interactive elements have sufficient colour contrast ratios to ensure readability for users with visual impairments.
 
 - **Alt Text for Images:**  
   Descriptive alt text is provided for all meaningful images and icons.
@@ -110,7 +110,7 @@ To ensure fast load times and a smooth user experience, Flashcard Quizzes follow
 
 ## Color Palette
 
-The Flashcard Quizzes app uses a modern, accessible color palette for both light and dark modes to ensure readability and a pleasant user experience.
+The Flashcard Quizzes app uses a modern, accessible colour palette for both light and dark modes to ensure readability and a pleasant user experience.
 
 | Purpose                | Light Mode         | Dark Mode         |
 |------------------------|-------------------|-------------------|
@@ -122,7 +122,7 @@ The Flashcard Quizzes app uses a modern, accessible color palette for both light
 | Correct Answer         | `#b6e2a1`         | `#3a5d2c`         |
 | Wrong Answer           | `#f7b2ad`         | `#a94442`         |
 
-- All colors are chosen for high contrast and accessibility.
+- All colours are chosen for high contrast and accessibility.
 - The palette ensures the app is visually appealing and easy to use on all devices and in all lighting conditions.
 
 ---
@@ -138,7 +138,7 @@ The Flashcard Quizzes app uses a modern, accessible color palette for both light
 - Responsive and modern UI (container is always 80% of viewport width)
 - Data persistence with localStorage
 - **Dark Mode / Light Mode toggle for comfortable viewing**
-- **Modern, accessible color palettes for both light and dark themes**
+- **Modern, accessible colour palettes for both light and dark themes**
 - Accessible and mobile-friendly design
 - **Add/Edit Forms Hidden by Default:** The "Add New Flashcard" and "Edit Flashcard" forms are now hidden until the user clicks their respective buttons, keeping the interface clean and focused.
 
@@ -217,8 +217,8 @@ _No build steps or dependencies required._
 - **Expand Categories:** Add new categories and update the category dropdown in `index.html`.
 - **Edit Flashcard Section:** The edit form now uses a category dropdown and a dynamic question dropdown for easier flashcard selection and editing.
 - **Add/Edit Forms Visibility:** Both forms are hidden by default and only shown when their respective buttons are clicked.
-- **Adjust Timer:** You can change the timer's default behavior or alert in `script.js`.
-- **Tweak Color Palettes:** Update the CSS variables or color values in `style.css` for your own look.
+- **Adjust Timer:** You can change the timer's default behaviour or alert in `script.js`.
+- **Tweak Color Palettes:** Update the CSS variables or colour values in `style.css` for your preferred colour choices.
 
 ---
 
