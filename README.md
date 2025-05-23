@@ -112,6 +112,10 @@ To ensure fast load times and a smooth user experience, Custom Flashcards follow
 
 ![Performance Example](imgs/performBestPracScoreDesk.PNG)
 
+-**During development process:**
+
+![Performance Example](imgs\performBestPracScore.png)
+
 ---
 
 ## Color Palette
