@@ -114,7 +114,7 @@ To ensure fast load times and a smooth user experience, Custom Flashcards follow
 
 -**During development process:**
 
-![Performance Example](imgs\performBestPracScore.png)
+![Performance Example](imgs/performBestPracScore.png)
 
 ---
 
