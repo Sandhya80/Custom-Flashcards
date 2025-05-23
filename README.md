@@ -31,7 +31,7 @@ A modern, interactive flashcard app for learning JavaScript, HTML5, and CSS3. Fe
 ## Deployed App
 
 You can try the Custom Flashcards live here:  
-[ ](https://sandhya80.github.io/Flashcard3/)
+[https://sandhya80.github.io/Custom-Flashcards/](https://sandhya80.github.io/Custom-Flashcards/)
 
 ---
 
