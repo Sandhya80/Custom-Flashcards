@@ -247,4 +247,4 @@ GitHub: [sandhya80](https://github.com/sandhya80)
 
 ---
 
-Happy learning and enjoy practicing with your customized Flashcard Quizzes app!
+Happy learning and enjoy practicing with your Custom Flashcards app!
