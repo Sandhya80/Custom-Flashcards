@@ -38,7 +38,7 @@ You can try the Custom Flashcards live here:
 ## File Structure
 
 ```plaintext
-flashcard-quizzes/
+Custom-Flashcards/
 ├── index.html         # Main HTML file
 ├── style.css          # App styling
 ├── script.js          # App logic and interactivity
@@ -50,7 +50,7 @@ flashcard-quizzes/
 
 ## Accessibility and SEO
 
-Flashcard Quizzes is built with accessibility and SEO best practices in mind:
+Custom Flashcards is built with accessibility and SEO best practices in mind:
 
 - **Semantic HTML:**  
   Proper use of HTML5 semantic elements (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.) to structure the content meaningfully.
@@ -82,7 +82,7 @@ Flashcard Quizzes is built with accessibility and SEO best practices in mind:
 
 ## Performance and Best Practices
 
-To ensure fast load times and a smooth user experience, Flashcard Quizzes follows these performance and best practices:
+To ensure fast load times and a smooth user experience, Custom Flashcards follows these performance and best practices:
 
 - **Optimized Assets:**  
   Images and other assets are optimized for the web to reduce file size and improve loading speed.
@@ -104,13 +104,19 @@ To ensure fast load times and a smooth user experience, Flashcard Quizzes follow
 
 **Performance and Best Practices Test Results:**  
 
-![Performance Example](imgs/performBestPracScore.PNG)
+-**For Mobile devices:**
+
+![Performance Example](imgs/performBestPracScoreMb.PNG)
+
+-**For Desktop and larger devices:**
+
+![Performance Example](imgs/performBestPracScoreDesk.PNG)
 
 ---
 
 ## Color Palette
 
-The Flashcard Quizzes app uses a modern, accessible colour palette for both light and dark modes to ensure readability and a pleasant user experience.
+The Custom Flashcards app uses a modern, accessible colour palette for both light and dark modes to ensure readability and a pleasant user experience.
 
 | Purpose                | Light Mode         | Dark Mode         |
 |------------------------|-------------------|-------------------|
@@ -146,7 +152,7 @@ The Flashcard Quizzes app uses a modern, accessible colour palette for both ligh
 
 ## JavaScript Methodologies Used
 
-Flashcard Quizzes leverages modern JavaScript methodologies and best practices to ensure a robust, maintainable, and interactive user experience:
+Custom Flashcards leverages modern JavaScript methodologies and best practices to ensure a robust, maintainable, and interactive user experience:
 
 - **Modular Code Structure:**  
   Functions are organized by responsibility (rendering, event handling, data management) for clarity and maintainability.
@@ -184,8 +190,8 @@ Flashcard Quizzes leverages modern JavaScript methodologies and best practices t
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/flashcard-quizzes.git
-   cd flashcard-quizzes
+   git clone https://github.com/yourusername/Custom-Flashcards.git
+   cd Custom-Flashcards
    ```
 
 2. **Open `index.html` in your browser.**
