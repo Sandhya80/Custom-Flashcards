@@ -1,4 +1,4 @@
-/* General body and container styling */
+/* ===== General body and container styling ===== */
 body {
   background: #f3f3f5;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -7,6 +7,7 @@ body {
   color: #0d1418; /* Dark blue-gray */
 }
 
+/* Main app container */
 .container {
   width: 90vw;              /* 90% of viewport width */
   max-width: 900px;
@@ -20,7 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-/* For dark mode */
+/* ===== Dark mode container styling ===== */
 body.dark-mode .container {
   background: #232323;
   color: #f1f1f1;
@@ -28,16 +29,20 @@ body.dark-mode .container {
   box-shadow: 0 4px 24px rgba(0,0,0,0.40), 0 1.5px 6px rgba(0,0,0,0.20);
 }
 
-/* Header and Controls */
+/* ===== Header and Controls ===== */
 h1 {
   text-align: center;
   margin-bottom: 0.5em;
 }
+
+/* Center the theme toggle button */
 .toggle-center {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
 }
+
+/* Theme toggle button styling */
 .theme-toggle-btn {
   font-size: 1.1em;
   padding: 0.4em 1.2em;
@@ -50,6 +55,8 @@ h1 {
 .theme-toggle-btn:focus {
   outline: 2px solid #917474;
 }
+
+/* Score and timer row layout */
 .score-timer-row {
   display: flex;
   gap: 2em;
@@ -58,6 +65,8 @@ h1 {
   margin: 1em 0 1.5em 0;
   flex-wrap: wrap; /* allow wrapping */
 }
+
+/* Score and timer display styling */
 .score, .timer {
   display: flex;
   align-items: center;
@@ -65,6 +74,8 @@ h1 {
   font-size: 1.1em;
   flex-wrap: wrap; /* allow wrapping inside */
 }
+
+/* Score and timer reset buttons */
 .score-reset-btn {
   background: #eee;
   border: 1px solid #917474;
@@ -77,6 +88,8 @@ h1 {
 .score-reset-btn:focus {
   outline: 2px solid #917474;
 }
+
+/* Timer input fields */
 .timer input[type="number"] {
   width: 2.5em;
   min-width: 0;
@@ -88,6 +101,8 @@ h1 {
   font-size: 1em;
   box-sizing: border-box;
 }
+
+/* Timer set button */
 .timer-set-btn {
   background: #eee;
   border: 1px solid #917474;
@@ -100,12 +115,16 @@ h1 {
 .timer-set-btn:focus {
   outline: 2px solid #917474;
 }
+
+/* Timer display */
 .timer span {
   font-family: monospace;
   font-size: 1.2em;
   min-width: 3.5em;
   text-align: center;
 }
+
+/* ===== Category Filter and Shuffle ===== */
 .category-row {
   display: flex;
   justify-content: center;
@@ -117,13 +136,14 @@ h1 {
   margin-right: 0.5em;
 }
 
-/* Flashcard Section */
+/* ===== Flashcard Section ===== */
 .flashcard-section {
   margin-bottom: 2em;
   text-align: center;
 }
 
-/* Flip card container */
+/* ===== Flip Card Styling ===== */
+/* Card container */
 .card {
   width: 100%;
   max-width: 400px;
@@ -141,7 +161,7 @@ h1 {
   overflow: visible;
 }
 
-/* Flip inner wrapper */
+/* Card inner wrapper for flip animation */
 .card-inner {
   position: relative;
   width: 100%;
@@ -151,12 +171,12 @@ h1 {
   transform-style: preserve-3d;
 }
 
-/* Flip on .flipped */
+/* Flip animation on .flipped */
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
 
-/* Card faces */
+/* Card faces (front and back) */
 .card .front,
 .card .back {
   position: absolute;
@@ -175,20 +195,20 @@ h1 {
   font-size: 1.1em;
 }
 
-/* Front face */
+/* Front face styling */
 .card .front {
   background: #adc585;
   z-index: 2;
 }
 
-/* Back face */
+/* Back face styling */
 .card .back {
   background: #b19b9b;
   transform: rotateY(180deg);
   z-index: 3;
 }
 
-/* Dark mode for both sides*/ 
+/* Dark mode for card faces */
 body.dark-mode .card .front {
   background: #797474;
   color: #f1f1f1;
@@ -198,7 +218,7 @@ body.dark-mode .card .back {
   color: #f1f1f1;
 } 
 
-/* Choices */
+/* ===== Choices (Multiple Choice Buttons) ===== */
 .choices {
   margin-bottom: 1em;
 }
@@ -217,7 +237,7 @@ body.dark-mode .card .back {
   outline: 2px solid #506072;
 }
 
-/* Navigation Controls */
+/* ===== Navigation Controls ===== */
 .controls {
   display: flex;
   justify-content: center;
@@ -238,7 +258,7 @@ body.dark-mode .card .back {
   outline: 2px solid #855555;
 }
 
-/* Forms Section - stacked vertically */
+/* ===== Forms Section (Add/Edit Flashcard) ===== */
 .forms-section-vertical {
   display: flex;
   flex-direction: column;
@@ -286,7 +306,7 @@ body.dark-mode .card .back {
   margin-top: 1em;
 }
 
-/* Style for the edit flashcard form dropdowns */
+/* Edit flashcard form dropdowns and fields */
 #editForm label,
 #editForm select,
 #editForm input {
@@ -296,19 +316,16 @@ body.dark-mode .card .back {
   font-size: 1em;
   box-sizing: border-box;
 }
-
 #editForm select,
 #editForm input[type="text"] {
   padding: 0.5em;
   border-radius: 0.4em;
   border: 1px solid #b0b0b0;
 }
-
 #editForm button {
   margin-right: 0.5em;
   margin-top: 0.5em;
 }
-
 #editForm {
   background: #f8f8f8;
   border-radius: 1em;
@@ -321,19 +338,17 @@ body.dark-mode #editForm {
   color: #f1f1f1;
 }
 
-/* Dark mode styles */
+/* ===== Dark Mode Styles ===== */
 body.dark-mode, .dark-mode .container {
   background: #494646;
   color: #f1f1f1;
 }
-
 body.dark-mode .card,
 .dark-mode .form-part {
   background: #232323;
   color: #f1f1f1;
   border-color: #2f574e;
 }
-
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode button {
@@ -341,7 +356,6 @@ body.dark-mode button {
   color: #f1f1f1;
   border-color: #2f574e;
 }
-
 body.dark-mode .choice-btn,
 body.dark-mode .score-reset-btn,
 body.dark-mode .timer-set-btn,
@@ -351,7 +365,7 @@ body.dark-mode .theme-toggle-btn {
   border-color: #2f574e;
 }
 
-/* Responsive */
+/* ===== Responsive Design ===== */
 @media (max-width: 800px) {
   .score-timer-row, .category-row {
     flex-direction: column;

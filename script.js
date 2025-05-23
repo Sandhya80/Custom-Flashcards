@@ -1,3 +1,4 @@
+// ====== Flashcard Data Initialization ======
 // Initial flashcards for JavaScript, HTML5, and CSS3 categories (no repetitions)
 let flashcards = [
   // JavaScript category
@@ -182,13 +183,14 @@ let current = 0; // Index of current card
 let filteredCards = [...flashcards]; // Cards filtered by category
 let currentCategory = 'all'; // Current selected category
 
-// DOM element references
+// ====== DOM Element References ======
 const card = document.getElementById("flashcard");
 const front = card.querySelector(".front");
 const back = card.querySelector(".back");
 const scoreDisplay = document.getElementById("score");
 const categorySelect = document.getElementById("categorySelect");
 
+// ====== Local Storage Functions ======
 /**
  * Saves the current flashcards array and score to localStorage.
  */
@@ -207,6 +209,7 @@ function loadFromLocalStorage() {
   if (storedScore) score = parseInt(storedScore, 10);
 }
 
+// ====== Flashcard Rendering and Choice Logic ======
 /**
  * Renders the current flashcard's question and answer, updates score, and calls renderChoices.
  */
@@ -304,6 +307,7 @@ function handleChoice(selected) {
   }, 600); // 0.6s delay before checking the answer
 }
 
+// ====== Category Filtering and Shuffling ======
 /**
  * Filters flashcards by selected category, shuffles them, and renders the first card.
  */
@@ -333,6 +337,7 @@ function shuffleCards() {
   renderCard();
 }
 
+// ====== Flashcard CRUD Operations ======
 // Add new flashcard on form submit
 document.getElementById('cardForm').onsubmit = function(e) {
   e.preventDefault();
@@ -384,7 +389,7 @@ document.getElementById('cancelEdit').onclick = function() {
   document.getElementById('editForm').style.display = 'none'; // Hide the edit form
 };
 
-// --- Edit Flashcard Dropdown Logic ---
+// ====== Edit Flashcard Dropdown Logic ======
 
 // Populate questions dropdown based on selected category
 document.getElementById('editCategorySelect').addEventListener('change', function() {
@@ -436,6 +441,7 @@ document.getElementById('editForm').onsubmit = function(e) {
   }
 };
 
+// ====== Flashcard Navigation and Flip ======
 // Go to the next flashcard
 document.getElementById('nextBtn').onclick = function() {
   if (!filteredCards.length) return; // No cards to navigate
@@ -459,6 +465,7 @@ document.getElementById('flipBtn').onclick = function() {
   card.classList.toggle('flipped'); // Toggle the flipped class
 };
 
+// ====== Category Filter and Shuffle Button ======
 // Change category filter
 categorySelect.onchange = function() {
   filterByCategory(this.value); // Filter cards by selected category
@@ -474,7 +481,7 @@ document.getElementById('scoreResetBtn').onclick = function() {
   saveToLocalStorage();
 };
 
-// --- TIMER FEATURE ---
+// ====== TIMER FEATURE ======
 let timerInterval = null;
 let timerSeconds = 0;
 
@@ -540,7 +547,7 @@ timerResetBtn.addEventListener('click', () => {
 // Initialize timer display on page load
 updateTimerDisplay();
 
-// Dark/Light Mode Toggle
+// ====== Dark/Light Mode Toggle ======
 const themeToggleBtn = document.getElementById('themeToggleBtn');
 themeToggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
@@ -551,12 +558,14 @@ themeToggleBtn.addEventListener('click', () => {
   }
 });
 
+// ====== App Initialization ======
 // On page load: load data and render first card
 window.onload = function() {
   loadFromLocalStorage(); // Load flashcards and score from localStorage
   filterByCategory('all'); // Populate the category select options and render first card
 };
 
+// ====== Add/Edit Flashcard Form Visibility Logic ======
 document.addEventListener('DOMContentLoaded', function() {
   const showAddFormBtn = document.getElementById('showAddFormBtn');
   const showEditFormBtn = document.getElementById('showEditFormBtn');

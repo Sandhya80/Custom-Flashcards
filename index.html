@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags and page title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Custom Flashcards</title>
+  <!-- Main stylesheet and favicon -->
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body>
   <div class="container">
-    <!-- SECTION 1: Header, Theme, Timer, Score, Category, Shuffle -->
+    <!-- SECTION 1: Header, Theme Toggle, Timer, Score, Category Filter, Shuffle -->
     <h1>Custom Flashcards</h1>
     <div class="toggle-center">
+      <!-- Dark/Light mode toggle button -->
       <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark mode">
         🌙 Dark Mode
       </button>
     </div>
     <div class="score-timer-row">
+      <!-- Score display and reset -->
       <div class="score" aria-live="polite">
         Score: <span id="score">0</span>
         <button id="scoreResetBtn" title="Reset Score" class="score-reset-btn">⟳</button>
       </div>
+      <!-- Timer controls -->
       <div class="timer" aria-live="polite">
         <label for="timerInputMin">Timer:</label>
         <input type="number" id="timerInputMin" min="0" max="59" value="0" aria-label="Minutes"> :
@@ -31,6 +36,7 @@
       </div>
     </div>
     <div class="category-row">
+      <!-- Category filter dropdown -->
       <div class="category-filter">
         <label for="categorySelect">Category:</label>
         <select id="categorySelect">
@@ -40,18 +46,22 @@
           <option value="CSS3">CSS3</option>
         </select>
       </div>
+      <!-- Shuffle flashcards button -->
       <button id="shuffleBtn">Shuffle</button>
     </div>
 
-    <!-- SECTION 2: Flashcard, Choices, Navigation -->
+    <!-- SECTION 2: Flashcard Display, Choices, Navigation Controls -->
     <div class="flashcard-section">
+      <!-- Flashcard front/back display -->
       <div id="flashcard" class="card">
         <div class="card-inner">
           <div class="front">Question</div>
           <div class="back">Answer</div>
         </div>
       </div>
+      <!-- Multiple choice options -->
       <div class="choices" id="choices"></div>
+      <!-- Navigation controls: Previous, Flip, Next -->
       <div class="controls">
         <button id="prevBtn">Previous</button>
         <button id="flipBtn">Flip</button>
@@ -59,15 +69,15 @@
       </div>
     </div>
 
-    <!-- Add these two buttons just below SECTION 2 (after the .controls div, before SECTION 3) -->
+    <!-- ACTION BUTTONS: Show Add/Edit Flashcard Forms -->
     <div class="flashcard-actions text-center">
       <button id="showAddFormBtn" type="button">Add New Flashcard</button>
       <button id="showEditFormBtn" type="button">Edit Flashcard</button>
     </div>
 
-    <!-- SECTION 3: Forms and Card Management (stacked vertically) -->
+    <!-- SECTION 3: Forms for Adding and Editing Flashcards -->
     <div class="forms-section-vertical">
-      <!-- Part 1: Add form, delete, reset, edit -->
+      <!-- Add New Flashcard Form (hidden by default) -->
       <div class="form-part" id="addFormPart">
         <h2>Add New Flashcard</h2>
         <form id="cardForm">
@@ -82,13 +92,14 @@
           </select>
           <button type="submit">Add Card</button>
         </form>
+        <!-- Card management actions -->
         <div class="card-actions">
           <button id="deleteBtn">Delete Current Card</button>
           <button id="resetBtn" class="reset">Reset All Flashcards</button>
           <button id="editBtn">Edit Current Card</button>
         </div>
       </div>
-      <!-- Part 2: Edit form -->
+      <!-- Edit Flashcard Form (hidden by default) -->
       <div class="form-part" id="editFormPart">
         <h2>Edit Flashcard</h2>
         <form id="editForm">
@@ -112,6 +123,7 @@
       </div>
     </div>
   </div>
+  <!-- Main JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
