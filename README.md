@@ -16,7 +16,8 @@ A modern, interactive flashcard app for learning JavaScript, HTML5, and CSS3. Fe
 - [JavaScript Methodologies Used](#javascript-methodologies-used)
 - [Getting Started](#getting-started)
 - [User Instructions](#user-instructions)
-- [Customization](#customization)
+- [Customisation](#customisation)
+- [Future Enhancements](#future-enhancements)
 - [License](#license)
 - [Contact](#contact)
 
@@ -220,7 +221,7 @@ _No build steps or dependencies required._
 
 ---
 
-## Customization
+## Customisation
 
 - **Add More Flashcards:** Edit `script.js` and add more questions/answers to the flashcards array.
 - **Change Styles:** Modify `style.css` for custom colours and layout.
@@ -229,6 +230,54 @@ _No build steps or dependencies required._
 - **Add/Edit Forms Visibility:** Both forms are hidden by default and only shown when their respective buttons are clicked.
 - **Adjust Timer:** You can change the timer's default behaviour or alert in `script.js`.
 - **Tweak Color Palettes:** Update the CSS variables or colour values in `style.css` for your preferred colour choices.
+
+---
+
+## Future Enhancements
+
+Here are some future enhancements and features planned for Custom Flashcards:
+
+- **User Accounts & Authentication:**  
+  Allow users to register, log in, and save their flashcards to their own account. Sync flashcards across devices.
+
+- **Import/Export Flashcards:**  
+  Enable users to export their flashcards as CSV or JSON. Allow importing flashcards from files or other sources.
+
+- **Flashcard Sharing:**  
+  Let users share flashcard sets via a link or QR code. Public or private sharing options.
+
+- **Spaced Repetition & Smart Review:**  
+  Implement spaced repetition algorithms (like Anki) for more effective learning. Show cards that need review based on user performance.
+
+- **Images & Rich Content:**  
+  Allow adding images, code snippets, or audio to flashcards. Support for Markdown or rich text formatting.
+
+- **Progress Tracking & Analytics:**  
+  Show user stats: cards learned, accuracy, streaks, etc. Visual progress charts.
+
+- **Tags & Advanced Filtering:**  
+  Add tags to flashcards for better organization. Filter and search by tags, difficulty, or custom fields.
+
+- **Multiple Decks & Categories:**  
+  Support for creating and managing multiple decks or subjects. Easy deck switching and management.
+
+- **Mobile App or PWA:**  
+  Make the app installable as a Progressive Web App (PWA). Optimize for offline use and mobile devices.
+
+- **Gamification:**  
+  Add achievements, badges, or leaderboards. Daily/weekly challenges.
+
+- **Voice Features:**  
+  Text-to-speech for questions/answers. Voice input for answering or adding cards.
+
+- **Accessibility Improvements:**  
+  Enhanced keyboard navigation. Screen reader optimizations.
+
+- **Customisation:**  
+  Allow users to customise themes, fonts, and card appearance. Night mode scheduling.
+
+- **Collaboration:**  
+  Allow collaborative decks where multiple users can contribute.
 
 ---
 
