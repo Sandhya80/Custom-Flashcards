@@ -1,0 +1,410 @@
+/* General body and container styling */
+body {
+  background: #f3f3f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #0d1418; /* Dark blue-gray */
+}
+
+.container {
+  width: 90vw;              /* 90% of viewport width */
+  max-width: 900px;
+  min-width: 280px;
+  margin: 2em auto;
+  padding: 2em 1.5em;
+  background: #e9eebd;
+  border-radius: 1.2em;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+  border: 1px solid #917474;
+  box-sizing: border-box;
+}
+
+/* For dark mode */
+body.dark-mode .container {
+  background: #232323;
+  color: #f1f1f1;
+  border-color: #444;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.40), 0 1.5px 6px rgba(0,0,0,0.20);
+}
+
+/* Header and Controls */
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.toggle-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.theme-toggle-btn {
+  font-size: 1.1em;
+  padding: 0.4em 1.2em;
+  border-radius: 1em;
+  border: 1px solid #917474;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.theme-toggle-btn:focus {
+  outline: 2px solid #917474;
+}
+.score-timer-row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 1.5em 0;
+  flex-wrap: wrap; /* allow wrapping */
+}
+.score, .timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1em;
+  flex-wrap: wrap; /* allow wrapping inside */
+}
+.score-reset-btn {
+  background: #eee;
+  border: 1px solid #917474;
+  border-radius: 1em;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  margin-left: 0.5em;
+  transition: background 0.2s;
+}
+.score-reset-btn:focus {
+  outline: 2px solid #917474;
+}
+.timer input[type="number"] {
+  width: 2.5em;
+  min-width: 0;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 0.3em;
+  border: 1px solid #ccc;
+  padding: 0.2em 0.4em;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.timer-set-btn {
+  background: #eee;
+  border: 1px solid #917474;
+  border-radius: 1em;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  margin-right: 0.5em;
+  transition: background 0.2s;
+}
+.timer-set-btn:focus {
+  outline: 2px solid #917474;
+}
+.timer span {
+  font-family: monospace;
+  font-size: 1.2em;
+  min-width: 3.5em;
+  text-align: center;
+}
+.category-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+.category-filter label {
+  margin-right: 0.5em;
+}
+
+/* Flashcard Section */
+.flashcard-section {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+/* Flip card container */
+.card {
+  width: 100%;
+  max-width: 400px;
+  min-width: 0;
+  margin: 0 auto 1em auto;
+  border: 2px solid #c7c1c1;
+  border-radius: 1em;
+  background: transparent; /* Let inner sides show */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: relative;
+  min-height: 180px;
+  perspective: 1000px; /* Enable 3D space */
+  transition: box-shadow 0.2s;
+  word-break: break-word;
+  overflow: visible;
+}
+
+/* Flip inner wrapper */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+
+/* Flip on .flipped */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card faces */
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+  border-radius: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+/* Front face */
+.card .front {
+  background: #adc585;
+  z-index: 2;
+}
+
+/* Back face */
+.card .back {
+  background: #b19b9b;
+  transform: rotateY(180deg);
+  z-index: 3;
+}
+
+/* Dark mode for both sides*/ 
+body.dark-mode .card .front {
+  background: #797474;
+  color: #f1f1f1;
+}
+body.dark-mode .card .back {
+  background: #8c9b89;
+  color: #f1f1f1;
+} 
+
+/* Choices */
+.choices {
+  margin-bottom: 1em;
+}
+.choice-btn {
+  margin: 0.3em;
+  padding: 0.5em 1.2em;
+  border-radius: 0.7em;
+  border: 1px solid #bbb;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.choice-btn:hover, .choice-btn:focus {
+  background: #adc585;
+  outline: 2px solid #506072;
+}
+
+/* Navigation Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.controls button {
+  padding: 0.5em 1.2em;
+  border-radius: 0.7em;
+  border: 1px solid #bbb;
+  background: #b98d8d;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.controls button:hover, .controls button:focus {
+  background: #c79f9f;
+  outline: 2px solid #855555;
+}
+
+/* Forms Section - stacked vertically */
+.forms-section-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+.form-part {
+  background: #b19b9b;
+  border-radius: 1em;
+  padding: 1.5em 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  margin-bottom: 0;
+}
+.form-part h2 {
+  margin-top: 0;
+}
+.form-part form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.form-part input, .form-part select {
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: 1px solid #bbb;
+  font-size: 1em;
+}
+.form-part button {
+  margin-top: 0.5em;
+  padding: 0.5em 1.2em;
+  border-radius: 0.7em;
+  border: 1px solid #885353;
+  background: #b98d8d;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.form-part button:hover, .form-part button:focus {
+  background: #c79f9f;
+  outline: 2px solid #855555;
+}
+.card-actions {
+  display: flex;
+  gap: 0.7em;
+  margin-top: 1em;
+}
+
+/* Style for the edit flashcard form dropdowns */
+#editForm label,
+#editForm select,
+#editForm input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.7em;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#editForm select,
+#editForm input[type="text"] {
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: 1px solid #b0b0b0;
+}
+
+#editForm button {
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+#editForm {
+  background: #f8f8f8;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 1em;
+}
+body.dark-mode #editForm {
+  background: #232323;
+  color: #f1f1f1;
+}
+
+/* Dark mode styles */
+body.dark-mode, .dark-mode .container {
+  background: #494646;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card,
+.dark-mode .form-part {
+  background: #232323;
+  color: #f1f1f1;
+  border-color: #2f574e;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  background: #232323;
+  color: #f1f1f1;
+  border-color: #2f574e;
+}
+
+body.dark-mode .choice-btn,
+body.dark-mode .score-reset-btn,
+body.dark-mode .timer-set-btn,
+body.dark-mode .theme-toggle-btn {
+  background: #232323;
+  color: #f1f1f1;
+  border-color: #2f574e;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .score-timer-row, .category-row {
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+  }
+  .card {
+    max-width: 98vw;
+    padding: 1.2em 0.5em;
+  }
+}
+@media (max-width: 600px) {
+  .score-timer-row, .category-row, .controls {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: stretch;
+  }
+  .timer, .score {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .timer input[type="number"], .timer-set-btn, .score-reset-btn {
+    flex: 1 1 2.5em;
+    min-width: 2.5em;
+    margin-bottom: 0.3em;
+  }
+  .card {
+    min-width: 0;
+    font-size: 1em;
+    padding: 1em 0.2em;
+    word-break: break-word;
+  }
+  .forms-section-vertical {
+    gap: 1em;
+  }
+  .form-part {
+    padding: 1em 0.5em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .card-actions {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  #editForm label,
+  #editForm select,
+  #editForm input {
+    font-size: 1em;
+  }
+}
