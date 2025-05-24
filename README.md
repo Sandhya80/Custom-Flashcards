@@ -19,6 +19,7 @@ A modern, interactive flashcard app for learning JavaScript, HTML5, and CSS3. Fe
 - [Customisation](#customisation)
 - [Future Enhancements](#future-enhancements)
 - [License](#license)
+- [Credits](#credits)
 - [Contact](#contact)
 
 ---
@@ -284,6 +285,12 @@ Here are some future enhancements and features planned for Custom Flashcards:
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+## Credits
+
+Special thanks to **GitHub Copilot** for assisting with bug fixes and overall performance enhancements throughout the development of this project.
 
 ---
 
